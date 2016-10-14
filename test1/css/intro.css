@@ -1,0 +1,1479 @@
+body{
+	font-family: Roboto Mono, Tahoma, Arial, sans-serif;
+    font-weight: 300;
+	margin: 0px;
+	padding: 0px;
+	height: 200vh;
+}
+.animatedLetters{
+    margin: 0px;
+    margin: 0px;
+    font-size: 2em;
+}
+.projects{
+    position: relative;
+    height: 100vh;
+    display: inline-block;
+    background-color: #d3d3d3;
+    width: 100%
+}
+#squish{
+    position: relative;
+    display: inline-block;
+    height: 100vh;
+    animation-name: squish;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay:18500ms;
+    animation-fill-mode: forwards;
+}
+.tire_f, .tire_b{
+    left: -10em;
+    margin-top: 45vh;
+    top: 0em;
+    width: 2.2em;
+    height: 2.2em;
+    position: absolute;
+    background-image: url("tiresmall.png");
+    background-size: 100% 100%;
+}
+
+.jeep{
+    left: -10em;
+    position: absolute;
+    margin-top: 42vh;
+    top: -1.7em;
+    width: 8em;
+    height:5em; 
+    animation-name: movement;
+    animation-duration: 6000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay:7000ms;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: movement;
+    -webkit-animation-duration: 6000ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: movement;
+    -moz-animation-duration: 6000ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: movement;
+    -ms-animation-duration: 6000ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
+
+    background-image: url("jeepanimation.png");
+    background-size: 100% 100%;
+    top: 0em;
+
+/*    margin-left: 1.8em;
+*/}
+.tire_b{
+    margin-left: 5em;
+    animation-name: back_tire;
+    animation-duration: 6000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay:7000ms;
+    -webkit-animation-name: back_tire;
+    -webkit-animation-duration: 6000ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: back_tire;
+    -moz-animation-duration: 6000ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: back_tire;
+    -ms-animation-duration: 6000ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
+/*    right: 8em;
+*/}
+.tire_f{
+    margin-left: 0.4em;
+    animation-name: front_tire;
+    animation-duration: 6000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay:7000ms;
+    -webkit-animation-name: front_tire;
+    -webkit-animation-duration: 6000ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: front_tire;
+    -moz-animation-duration: 6000ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: front_tire;
+    -ms-animation-duration: 6000ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
+/*    right: 8em;
+*/}
+
+/* Chrome, Safari, Opera */
+
+
+/*@keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}*/
+@keyframes squish{
+    from{
+        height: 100vh;
+    }
+    to{
+        height: 3em;
+    }
+}
+
+@keyframes movement {
+    from {
+        transform: rotate(0deg);
+
+        left: 100vw;
+        top: -1.7em;
+    }
+    28%{
+        transform: rotate(0deg);
+
+    }
+    30%{
+        transform: rotate(15deg);
+        top: -1.7em;
+    }
+    33%{
+        transform: rotate(10deg);
+        top: -2.4em;
+    }
+    35%{
+        top: -2.4em;
+        transform: rotate(0deg);
+
+    }
+    36%{
+        transform: rotate(2deg);
+
+        top: -3em;
+    }
+    37%{
+        transform: rotate(-2deg);
+
+        top: -2.7em;
+    }
+    38%{
+        transform: rotate(2deg);
+
+        top: -3em;
+    }
+    39%{
+        transform: rotate(-2deg);
+
+        top: -2.7em;
+    }
+    40%{
+        transform: rotate(2deg);
+
+        top: -3em;
+    }
+    41%{
+        transform: rotate(-2deg);
+
+        top: -2.7em;
+    }
+    42%{
+        transform: rotate(-15deg);
+
+        top: -2.4em;
+    }
+    44%{
+    transform: rotate(0deg);
+
+        top: -1.7em;
+    }
+    46%{
+        top: -1.7em;
+    }
+    63%{
+        top: -1.7em;
+        transform: rotate(0deg);
+    }
+    64%{
+        transform: rotate(10deg);
+    }
+    66%{
+        top: -2.7em;        
+        transform: rotate(0deg);
+    }
+    68%{
+        top: -2.7em;
+    }
+    70%{
+        transform: rotate(5deg);
+
+        top: -3.1em;
+    }
+    71%{
+        transform: rotate(0deg);
+
+        top: -2.7em;
+    }
+    74%{
+        top: -2.7em;
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(5deg);
+        top: -3.1em;
+    }
+    80%{
+        transform: rotate(0deg);
+        top: -3.1em;
+    }
+    83%{
+        transform: rotate(-10deg);
+        top: -1.7em;
+    }
+    85%{
+        transform: rotate(0deg);
+    }
+    to {
+        left: -10em;
+        top: -1.7em;
+        transform: rotate(0deg);
+
+    }
+}
+@-ms-keyframes movement {
+    from { -ms-transform: left: 100%; }
+    to { -ms-transform: right: 0%; }
+}
+@-moz-keyframes movement {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0deg); }
+}
+@-webkit-keyframes movement {
+    from {
+        left: 100%;
+        top: -2.7em;
+    }
+    to {
+        left: -10em;
+    }
+    32%{
+        -webkit-transform: rotate(0deg);
+    }
+    37%{
+        -webkit-transform: rotate(10deg);
+    }
+    45%{
+         -webkit-transform: rotate(0deg);
+    }
+    50%{
+         -webkit-transform: rotate(-10deg);
+    }
+    55%{
+         -webkit-transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes front_tire {
+from {
+    -webkit-transform: rotate(720deg);
+        left: 100%;
+        top: 0em;
+    }
+    30%{
+        top: 0em;
+    }
+    34%{
+        top: 1em;
+    }
+    36%{
+        top: 1em;
+    }
+    40%{
+        top: 1em;
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+        left: -10em;
+        top: 0em;
+    }
+}
+@keyframes front_tire {
+
+    from {
+        transform:rotate(720deg);
+        left: 100%;
+        top: 0em;
+    }
+    30%{
+        top: 0em;
+    }
+    33%{
+        top: -1em;
+    }
+    35%{
+        top: -1em;
+    }
+    36%{
+        top: -1.6em;
+    }
+    37%{
+        top: -1.3em;
+    }
+    38%{
+        top: -1.6em;
+    }
+    39%{
+        top: -1.3em;
+    }
+    40%{
+        top: -1.6em;
+    }
+    41%{
+        top: -1.3em;
+    }
+    42%{
+        top: -1em;
+    }
+    44%{
+        top: 0em;
+    }
+    46%{
+        top: 0em;
+    }
+    63%{
+        top: 0em;
+    }
+    66%{
+        top: -1em;
+    }
+    68%{
+        top: -1em;
+    }
+    70%{
+        top: -1.4em;
+    }
+    71%{
+        top: -1em;
+    }
+    74%{
+        top: -1em;
+    }
+    75%{
+        top: -1.4em;
+    }
+    80%{
+        top: -1.4em;
+    }
+    83%{
+        top: 0em;
+    }
+    to {
+        transform:rotate(0deg);
+        left: -10em;
+        top: 0em;
+    }
+}
+@-webkit-keyframes back_tire {
+    from {
+         -webkit-transform: rotate(720deg);
+        left: 100%;
+    }
+    to {
+         -webkit-transform: rotate(0deg);
+        left: -10em;
+    }
+}
+@keyframes back_tire {
+
+    from {
+        transform:rotate(720deg);
+        left: 100%;
+    }
+    33%{
+        top: 0em;
+    }
+    36%{
+        top: -1em;
+    }
+    38%{
+        top: -1em;
+    }
+    39%{
+        top: -1.6em;
+    }
+    40%{
+        top: -1.3em;
+    }
+    41%{
+        top: -1.6em;
+    }
+    42%{
+        top: -1.3em;
+    }
+    43%{
+        top: -1.6em;
+    }
+    44%{
+        top: -1.3em;
+    }
+    45%{
+        top: -1em;
+    }
+    47%{
+        top: 0em;
+    }
+    49%{
+        top: 0em;
+    }
+    68%{
+        top: 0em;
+    }
+    71%{
+        top: -1em;
+    }
+    73%{
+        top: -1em;
+    }
+    75%{
+        top: -1.4em;
+    }
+    76%{
+        top: -1em;
+    }
+    79%{
+        top: -1em;
+    }
+    82%{
+        top: -1.4em;
+    }
+    87%{
+        top: -1.4em;
+    }
+    90%{
+        top: 0em;
+    }
+    to {
+        transform:rotate(0deg);
+        left: -10em;
+    }
+}
+.intro_letters{
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 45vh;
+	left: 0em;
+	text-align: left;
+	margin-left: -10vw;
+}
+/*.fun{
+	top: 2em;
+	left:50vw;
+}*/
+#i1{
+	animation-name: ani_iOne;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+/*	animation-fill-mode: forwards;
+*/	animation-timing-function: linear;
+}
+@keyframes ani_iOne{
+    from {
+        top: 45vh;
+    	left: 0em; 
+    	margin-left: -21em;
+    }
+    8%{
+        left: 0em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 0em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 0em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#l1{
+	animation-name: ani_lOne;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 600ms;
+}
+@keyframes ani_lOne{
+    from {
+        top: 45vh;
+        left: 2em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 2em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 2em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 2em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#i2{
+	animation-name: ani_iTwo;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 800ms;
+}
+@keyframes ani_iTwo{
+    from {
+        top: 45vh;
+        left: 3em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 3em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 3em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 3em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#k1{
+	animation-name: ani_kOne;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 1000ms;
+}
+@keyframes ani_kOne{
+    from {
+        top: 45vh;
+        left: 4em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 4em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 4em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 4em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#e1{
+	animation-name: ani_eOne;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 1200ms;
+}
+@keyframes ani_eOne{
+    from {
+        top: 45vh;
+        left: 5em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 5em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 5em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 5em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#m1{
+	animation-name: ani_mOne;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 1600ms;
+}
+@keyframes ani_mOne{
+    from {
+        top: 45vh;
+        left: 7em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 7em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 7em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 7em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#a1{
+	animation-name: ani_aOne;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 1800ms;
+}
+@keyframes ani_aOne{
+    from {
+        top: 45vh;
+        left: 8.1em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 8.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 8.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 8.1em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#k2{
+	animation-name: ani_kTwo;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 2000ms;
+}
+@keyframes ani_kTwo{
+    from {
+        top: 45vh;
+        left: 9.1em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 9.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 9.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 9.1em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#i3{
+	animation-name: ani_iThree;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 2200ms;
+}
+@keyframes ani_iThree{
+    from {
+        top: 45vh;
+        left: 10.1em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 10.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 10.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 10.1em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#n1{
+	animation-name: ani_nOne;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 2400ms;
+}
+@keyframes ani_nOne{
+    from {
+        top: 45vh;
+        left: 11.1em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 11.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 11.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 11.1em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#g1{
+	animation-name: ani_gOne;
+    animation-duration: 16000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 2600ms;
+}
+@keyframes ani_gOne{
+    from {
+        top: 45vh;
+        left: 12.1em; 
+        margin-left: -21em;
+    }
+    8%{
+        left: 12.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    92%{
+        left: 12.1em;
+        margin-left: 10vw;
+        top: 45vh;
+    }
+    to {
+        left: 12.1em;
+        margin-left: 10vw;
+        top: 105vh;
+    }
+}
+#f1{
+	animation-name: ani_fOne;
+	animation-duration: 2000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 3000ms;
+}
+@keyframes ani_fOne{
+    from {
+    	margin-left: 10vw;
+        left: 14em;
+        top: -2em;
+    }
+    40%{
+    	top: 45vh;
+    }
+    75%{
+    	top: 45vh;
+    }
+    to {
+    	margin-left: 10vw;
+        left: 14em;        
+        top: -2em;
+    }
+}
+#u1{
+	animation-name: ani_uOne;
+	animation-duration: 2000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 3200ms;
+}
+@keyframes ani_uOne{
+    from {
+    	margin-left: 10vw;
+        left: 15em;
+        top: -2em;
+    }
+    40%{
+    	top: 45vh;
+    }
+    75%{
+    	top: 45vh;
+    }
+    to {
+    	margin-left: 10vw;
+        left: 15em;        
+        top: -2em;
+    }
+}
+#n2{
+	animation-name: ani_nTwo;
+	animation-duration: 2000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 3400ms;
+}
+@keyframes ani_nTwo{
+    from {
+    	margin-left: 10vw;
+        left: 16em;
+        top: -2em;
+    }
+    40%{
+    	top: 45vh;
+    }
+    75%{
+    	top: 45vh;
+    }
+    to {
+    	margin-left: 10vw;
+        left: 16em;        
+        top: -2em;
+    }
+}
+#h1{
+	animation-name: ani_hOne;
+    animation-duration: 2000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 4000ms;
+}
+@keyframes ani_hOne{
+    from {
+    	margin-left: 10vw;
+        left: 14em;
+        top: 105vh;
+    }
+    0%{
+        top: 105vh;
+    }
+    40%{
+    	top: 45vh;
+    }
+    75%{
+    	top: 45vh;
+    }
+    99% {
+        top: 105vh;
+    }
+    100%{
+    	margin-left: 10vw;
+    	left: 14em;
+    	top: 105vh;
+    }
+}
+#a2{
+	animation-name: ani_aTwo;
+	animation-duration: 2000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 4200ms;
+}
+@keyframes ani_aTwo{
+    from {
+    	margin-left: 10vw;
+        left: 15em;
+        top: 105vh;
+    }
+    0%{
+        top: 105vh;
+    }
+    40%{
+    	top: 45vh;
+    }
+    75%{
+    	top: 45vh;
+    }
+    99% {
+        top: 105vh;
+    }
+    100%{
+    	margin-left: 10vw;
+    	left: 15em;
+    	top: 105vh;
+    }
+}
+#n3{
+	animation-name: ani_nThree;
+	animation-duration: 2000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 4400ms;
+}
+@keyframes ani_nThree{
+    from {
+    	margin-left: 10vw;
+        left: 16em;
+        top: 105vh;
+    }
+    0%{
+        top: 105vh;
+    }
+    40%{
+    	top: 45vh;
+    }
+    75%{
+    	top: 45vh;
+    }
+    99% {
+        top: 105vh;
+    }
+    100%{
+    	margin-left: 10vw;
+    	left: 16em;
+    	top: 105vh;
+    }
+}
+#d1{
+	animation-name: ani_dOne;
+	animation-duration: 2000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 4600ms;
+}
+@keyframes ani_dOne{
+    from {
+    	margin-left: 10vw;
+        left: 17em;
+        top: 105vh;
+    }
+    0%{
+        top: 105vh;
+    }
+    40%{
+    	top: 45vh;
+    }
+    75%{
+    	top: 45vh;
+    }
+    99% {
+        top: 105vh;
+    }
+    100%{
+    	margin-left: 10vw;
+    	left: 17em;
+    	top: 105vh;
+    }
+}
+#y1{
+	animation-name: ani_yOne;
+	animation-duration: 2000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 4800ms;
+}
+@keyframes ani_yOne{
+    from {
+    	margin-left: 10vw;
+        left: 18em;
+        top: 105vh;
+    }
+    0%{
+        top: 105vh;
+    }
+    40%{
+    	top: 45vh;
+    }
+    75%{
+    	top: 45vh;
+    }
+    99% {
+        top: 105vh;
+    }
+    100%{
+    	margin-left: 10vw;
+    	left: 18em;
+    	top: 105vh;
+    }
+}
+#e2{
+	animation-name: ani_eTwo;
+	animation-duration: 6000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 5600ms;
+}
+@keyframes ani_eTwo{
+    from {
+    	margin-left: 10vw;
+        left: 14em;
+        top: -2em;
+    }
+    12%{
+    	top: 45vh;
+    }
+    30%{
+    	top: 45vh;
+    	left: 14em;
+    	margin-left: 10vw;
+    }
+    to{
+    	margin-left: 105vw;
+        left: 14em;
+        top: 45vh;
+    }
+}
+#x1{
+	animation-name: ani_xOne;
+	animation-duration: 6000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 5800ms;
+}
+@keyframes ani_xOne{
+    from {
+    	margin-left: 10vw;
+        left: 15em;
+        top: -2em;
+    }
+    12%{
+    	top: 45vh;
+    }
+    30%{
+    	top: 45vh;
+    	left: 15em;
+    	margin-left: 10vw;
+    }
+    to{
+    	margin-left: 105vw;
+        left: 15em;
+        top: 45vh;
+    }
+}
+#c1{
+	animation-name: ani_cOne;
+	animation-duration: 6000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 6000ms;
+}
+@keyframes ani_cOne{
+    from {
+    	margin-left: 10vw;
+        left: 16em;
+        top: -2em;
+    }
+    12%{
+    	top: 45vh;
+    }
+    30%{
+    	top: 45vh;
+        left: 16em;
+    	margin-left: 10vw;
+    }
+    to{
+    	margin-left: 105vw;
+        left: 16em;
+        top: 45vh;
+    }
+}
+#i4{
+	animation-name: ani_iFour;
+	animation-duration: 6000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 6200ms;
+}
+@keyframes ani_iFour{
+    from {
+    	margin-left: 10vw;
+        left: 17em;
+        top: -2em;
+    }
+    12%{
+    	top: 45vh;
+    }
+    30%{
+    	top: 45vh;
+        left: 17em;
+    	margin-left: 10vw;
+    }
+    to{
+    	margin-left: 105vw;
+        left: 17em;
+        top: 45vh;
+    }
+}
+#t1{
+	animation-name: ani_tOne;
+	animation-duration: 6000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 6400ms;
+}
+@keyframes ani_tOne{
+    from {
+    	margin-left: 10vw;
+        left: 18em;
+        top: -2em;
+    }
+    12%{
+    	top: 45vh;
+    }
+    30%{
+    	top: 45vh;
+        left: 18em;
+    	margin-left: 10vw;
+    }
+    to{
+    	margin-left: 105vw;
+        left: 18em;
+        top: 45vh;
+    }
+}
+#i5{
+	animation-name: ani_iFive;
+	animation-duration: 6000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 6600ms;
+}
+@keyframes ani_iFive{
+    from {
+    	margin-left: 10vw;
+        left: 19em;
+        top: -2em;
+    }
+    12%{
+    	top: 45vh;
+    }
+    30%{
+    	top: 45vh;
+        left: 19em;
+    	margin-left: 10vw;
+    }
+    to{
+    	margin-left: 105vw;
+        left: 19em;
+        top: 45vh;
+    }
+}
+#n4{
+	animation-name: ani_nFour;
+	animation-duration: 6000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 6800ms;
+}
+@keyframes ani_nFour{
+    from {
+    	margin-left: 10vw;
+        left: 20em;
+        top: -2em;
+    }
+    12%{
+    	top: 45vh;
+    }
+    30%{
+    	top: 45vh;
+        left: 20em;
+    	margin-left: 10vw;
+    }
+    to{
+    	margin-left: 105vw;
+        left: 20em;
+        top: 45vh;
+    }
+}
+#g2{
+	animation-name: ani_gTwo;
+	animation-duration: 6000ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 7000ms;
+}
+@keyframes ani_gTwo{
+    from {
+    	margin-left: 10vw;
+        left: 21em;
+        top: -2em;
+    }
+    12%{
+    	top: 45vh;
+    }
+    30%{
+    	top: 45vh;
+        left: 21em;
+    	margin-left: 10vw;
+    }
+    to{
+    	margin-left: 105vw;
+        left: 21em;
+        top: 45vh;
+    }
+}
+#p1{
+    animation-name: ani_pOne;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay: 11000ms;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_pOne{
+    from {
+        margin-left: 100vw;
+        left: 14em;
+        top: 45vh;
+    }
+    30%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    80%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    to{
+        margin-left: 10vw;
+        left: 14em;
+        top: 2em;
+    }
+}
+#r1{
+    animation-name: ani_rOne;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay: 11200ms;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_rOne{
+    from {
+        margin-left: 100vw;
+        left: 15em;
+        top: 45vh;
+    }
+    30%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    80%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    to{
+        margin-left: 10vw;
+        left: 15em;
+        top: 2em;
+    }
+}
+#o3{
+    animation-name: ani_oThree;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay: 11400ms;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_oThree{
+    from {
+        margin-left: 100vw;
+        left: 16em;
+        top: 45vh;
+    }
+    30%{
+        top: 45vh;
+        margin-left: 10vw;
+    }
+    80%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    to{
+        margin-left: 10vw;
+        left: 16em;
+        top: 2em;
+    }
+}
+#j1{
+    animation-name: ani_jOne;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay: 11600ms;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_jOne{
+    from {
+        margin-left: 100vw;
+        left: 17em;
+        top: 45vh;
+    }
+    30%{
+        top: 45vh;
+        margin-left: 10vw;
+    }
+    80%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    to{
+        margin-left: 10vw;
+        left: 17em;
+        top: 2em;
+    }
+}
+#e4{
+    animation-name: ani_eFour;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay: 11800ms;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_eFour{
+    from {
+        margin-left: 100vw;
+        left: 18em;
+        top: 45vh;
+    }
+    30%{
+        top: 45vh;
+        margin-left: 10vw;
+    }
+    80%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    to{
+        margin-left: 10vw;
+        left: 18em;
+        top: 2em;
+    }
+}
+#c3{
+    animation-name: ani_cThree;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay: 12000ms;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_cThree{
+    from {
+        margin-left: 100vw;
+        left: 19em;
+        top: 45vh;
+    }
+    30%{
+        top: 45vh;
+        margin-left: 10vw;
+    }
+    80%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    to{
+        margin-left: 10vw;
+        left: 19em;
+        top: 2em;
+    }
+}
+#t3{
+    animation-name: ani_tThree;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-delay: 12200ms;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_tThree{
+    from {
+        margin-left: 100vw;
+        left: 20em;
+        top: 45vh;
+    }
+    30%{
+        top: 45vh;
+        margin-left: 10vw;
+    }
+    80%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    to{
+        margin-left: 10vw;
+        left: 20em;
+        top: 2em;
+    }
+}
+#s1{
+    animation-name: ani_sOne;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 12400ms;
+}
+@keyframes ani_sOne{
+    from {
+        margin-left: 100vw;
+        left: 21em;
+        top: 45vh;
+    }
+    30%{
+        top: 45vh;
+        margin-left: 10vw;
+    }
+    80%{
+        top: 45vh;
+        margin-left: 10vw;
+
+    }
+    to{
+        margin-left: 10vw;
+        left: 21em;
+        top: 2em;
+    }
+}
